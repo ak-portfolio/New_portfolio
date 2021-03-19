@@ -1,0 +1,1418 @@
+:root{
+  --orange: #f16529;
+  --black: #000;
+  --gray: #ccc;
+  --white: #fff
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+  color: var(--black);
+  font-family: "DNP 秀英明朝 Pr6N","ヒラギノ明朝 Pro","游明朝", YuMincho, "Hiragino Mincho ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", "typesquare", serif;
+}
+
+html{
+  overflow-x: hidden;
+}
+
+a{
+  display: block;
+  text-decoration: none;
+}
+
+ul{
+  list-style: none;
+  overflow: hidden;
+}
+
+img{
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  vertical-align: bottom;
+  object-fit: contain;
+}
+
+.br_sp,
+.br_tab{
+  display: none;
+}
+
+
+.wrap{
+  max-width: 120rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.section{
+  text-align: center;
+  padding: 10rem 0;
+}
+
+#index .section{
+  padding-top: 0;
+}
+
+.title{
+  font-size: 8rem;
+  text-align: center;
+  margin-bottom: 8rem;
+}
+
+/*btn*/
+.border_btn{
+  border-style: solid;
+  border-width: 2rem;
+  background-color: var(--black);
+  border-color: #444 #222;
+  box-shadow: 3px 5px 3px rgba(0,0,0,.5);
+  pointer-events: none;
+}
+
+.border_btn a{
+  pointer-events: auto;
+}
+
+.btn_wrap{
+  padding: 4rem 0;
+  overflow: hidden;
+}
+
+.btn_wrap li{
+  width: calc(50% - 4rem);
+  border: 1px solid var(--black);
+  font-size: 4rem;
+  text-align: center;
+  padding: 1rem 0;
+  border-radius: 8px;
+  transition: .2s ease;
+  box-shadow: 0 3px  3px rgba(0,0,0,.5);
+  position: relative;
+}
+
+.github:hover a,
+.link:hover a{
+  color:var(--white);
+}
+
+.github{
+  float: left;
+}
+
+.github:hover{
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.link{
+  float: right;
+}
+
+.link:hover{
+  background-color: var(--orange);
+  border: 1px solid var(--orange);
+}
+
+.link a{
+  color: var(--orange);
+}
+
+.btn_icon{
+  position: absolute;
+  right: 2rem;
+}
+
+.active{
+  opacity: 0;
+  position: absolute;
+  right: 0;
+}
+
+.github:hover .active,
+.link:hover .active{
+  opacity: 1;
+}
+
+.btn{
+  font-size: 1.8rem;
+  border-radius: 8px;
+  border: 1px solid var(--black);
+  background-color: var(--white);
+  box-shadow: 0 3px  3px rgba(0,0,0,.5);
+  padding: 1rem 4rem;
+  transition: .2s ease;
+}
+
+.btn:hover{
+  background-color: var(--black);
+  color: var(--white);
+  cursor: pointer;
+}
+
+.border_btn a:focus,
+.btn_wrap li a:focus,
+.btn:focus{
+  outline: none;
+}
+
+.border_btn:active,
+.btn_wrap li:active,
+.btn:active{
+  box-shadow: none;
+  position: relative;
+  top: 3px;
+}
+
+#cansel{
+  float: left;
+}
+
+#submit{
+  background-color: var(--orange);
+  color: var(--white);
+  border: 1px solid var(--orange);
+  padding: 1rem 8rem;
+  float: right;
+}
+
+#submit:hover{
+  background-color: var(--black);
+  color: var(--white);
+  border: 1px solid var(--black);
+}
+
+/*bg*/
+
+.bg{
+  background-image: url("../img/bg/index.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 0 calc(50vw - 50%);
+  margin: 0 calc(50% - 50vw);
+  position: relative;
+}
+
+#works{
+  background-image: url("../img/bg/works.jpg");
+}
+
+#skill{
+  background-image: url("../img/bg/skill.jpg");
+}
+
+#about{
+  background-image: url("../img/bg/about.jpg");
+}
+
+#contact{
+  background-image: url("../img/bg/contact.jpg");
+}
+
+#confirm,
+#complete{
+  background-image: url("../img/bg/contact.jpg");
+  height: 100vh;  
+}
+
+/*header,footer*/
+
+header{
+  max-width: 120rem;
+  width: 100%;
+  padding: 4rem 0;
+  overflow: hidden;
+}
+
+.main_logo{
+  float: left;
+  position: relative;
+}
+
+#nav_open,
+.nav_unshown{
+  display: none;
+}
+
+.nav_menu{
+  float: right;
+}
+
+.nav_menu li{
+  padding: 3.5rem 0;
+  padding-right: 3.5rem;
+  float: left;
+}
+
+.nav_menu li:last-of-type{
+  padding-right: 0;
+}
+
+.nav_menu li a{
+  font-size: 2.2rem;
+  border-bottom: 1px solid transparent;
+}
+
+.nav_menu li a:hover{
+  color: var(--orange);
+  border-bottom: 1px solid var(--orange);
+}
+
+footer{
+  background-color: var(--black);
+  padding: 2rem calc(50vw - 50%);
+  margin: 0 calc(50% - 50vw);
+  overflow: hidden;
+}
+
+footer .main_logo .active {
+  opacity: 0;
+  transition: .5s;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+footer .main_logo:hover .active {
+  opacity: 1;
+}
+
+footer .nav_menu li a{
+  color: var(--white);
+}
+
+
+/*index*/
+.index_title{
+  margin: 0 auto 4rem;
+}
+
+.change_text{
+  font-size: 4rem;
+}
+
+/*slick*/
+.slick-prev{
+  left: 1.5rem;
+}
+
+.slick-next{
+  right: 1.5rem;
+} 
+
+.slick-prev:before,
+.slick-next:before {
+  content: "";
+  width: 1.5rem;
+  height: 1.5rem;
+  border-right: 2px solid var(--black);
+  border-bottom: 2px solid var(--black);
+  transform: rotate(135deg);
+  position: absolute;
+}
+
+.slick-next:before{
+  transform: rotate(-45deg);
+}
+
+.slick{
+  padding: 10rem;
+}
+
+.slick li{
+  border-radius: 8px;
+  margin: 0 3rem;
+  position: relative;
+}
+
+.slick_caption{
+  font-size: 2.8rem;
+  color: var(--white);
+}
+
+.slick .img_box{
+  padding-top: 80%;
+}
+
+/*mask*/
+.mask{
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: .2s ease;
+  position: absolute;
+  bottom: 0;
+}
+
+.mask:hover{  
+  background-color: rgba(255,255,255, .9);
+  opacity: 1;
+}
+
+.mask_caption{
+  width:100%;
+  font-size: 2.8rem;
+  font-weight: bold;
+  font-family: "游ゴシック体", YuGothic;
+  transform: translateY(-25%);
+  position:absolute;
+  top: 50%;
+}
+
+.mask_img{
+  width: 4rem;
+  padding-top: 2rem;
+  margin: 0 auto;
+}
+
+/*lightbox.css*/
+.lightboxOverlay{
+  background-color: var(--gray);
+}
+
+.lightbox .lb-image{
+  position: absolute;
+  top: 10rem;
+}
+
+/*閉じるボタン*/
+.lb-dataContainer{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#lightbox .lb-close{
+  width: 5rem;
+  z-index: 100;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+}
+
+.lightbox_caption{
+  width: 100%;
+  height: 100%;
+  font-size: 4rem;
+  color: var(--orange);
+  text-align: center;
+  position: absolute;
+  top: 4rem;
+}
+
+/*works*/
+
+.tabs{
+  margin-bottom: 8rem;
+}
+
+.tab{
+  width: calc(100% / 3);
+  float: left;
+}
+
+.tab_btn{
+  max-width: 14rem;
+  font-size: 3.2rem;
+  cursor: pointer;
+  border-radius: 8px;
+  margin: 0 auto;
+  transition: all .2s ease;
+}
+
+.tab_active{
+  background-color: var(--orange);
+  color: var(--white);
+}
+
+.tab_btn:hover,
+.tab_active:hover{
+  background-color: rgba(241,101,42,.7);
+  color: var(--white);
+}
+
+.work_contents {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.work_contents li{
+  width: calc(50% - 4rem);
+  border-radius: 8px;
+  margin-bottom: 6rem;
+  overflow: hidden;
+  transition: .2s ease;
+  float: left;
+  position: relative;
+}
+
+.work_contents li:nth-of-type(even){
+  float: right;
+}
+
+.img_box{
+  padding-top: 52%;
+  position: relative;
+}
+
+.img_box img{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/*featherlight*/
+.featherlight-sample{
+  display: none;
+}
+
+.featherlight .featherlight-content{
+  max-width: 120rem;
+  padding: 10rem;
+}
+
+.featherlight:last-of-type{
+  background-color: var(--gray);
+}
+
+.featherlight .featherlight-close-icon{
+  width: 5rem;
+  margin: 2rem;
+}
+
+.featherlight .featherlight-close-icon:focus{
+  outline: none;
+}
+
+.feather_img{
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.feather_img .mask_caption{
+  font-size: 4rem;
+  text-align: center;
+}
+
+.feather_img .mask_img{
+  display: inline-block;
+  width: 8rem;
+  padding: 0;
+  padding-left: 2rem;
+}
+
+.feather_skill,
+.feather_link{
+  margin-bottom: 4rem;
+}
+
+.feather_skill span{
+  font-size: 2.8rem;
+  color: var(--orange);
+}
+
+.feather_skill p{
+  font-size: 2.4rem;
+}
+
+.feather_link span,
+.feather_caption span{
+  font-size: 2.4rem;
+  color: var(--orange);
+}
+
+.feather_link a{
+  font-size: 1.8rem;
+  color: var(--orange);
+}
+
+.feather_link a:hover{
+  color: var(--black);
+}
+
+.feather_caption p{
+  display: inline-block;
+  font-size: 1.8rem;
+}
+
+
+/*skill*/
+
+.check{
+  display: none;
+}
+
+.skill_type_title{
+  display: inline-block;
+  width: 100%;
+  font-size: 6rem;
+  font-family: "游ゴシック体", YuGothic;
+  color: var(--orange);
+  position: relative;
+}
+
+.skill_type_title:before, 
+.skill_type_title:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  display: inline-block;
+  width: 40%;
+  height: 1rem;
+  border-top: solid 4px var(--orange);
+  border-bottom: solid 4px var(--orange);
+}
+
+.skill_type_title:before {
+  left: 0;
+}
+
+.skill_type_title:after {
+  right: 0;
+}
+
+.skill_contents{
+  display: flex;
+  justify-content: space-between;
+  padding: 5rem calc(50vw - 50%) 10rem;
+  margin: 0 calc(50% - 50vw);
+}
+
+.skill_contents li{
+  width: calc(100% / 3 - 5rem);
+  background-color: var(--white); 
+  border-radius: 8px;
+  transition: .2s ease; 
+  position: relative;
+}
+
+.skill_contents li:hover{
+  transform: scale(1.2);
+  background-color: var(--black);
+}
+
+.skill_item{
+  padding: 4rem 2rem;
+}
+
+.skill_img{
+  margin-bottom: 4rem;
+}
+
+.skill_name{
+  font-size: 3.6rem;
+}
+
+.learning_time{
+  font-size: 2.4rem;
+  color: var(--orange);
+}
+
+.skill_contents li:hover .skill_name,
+.skill_contents li:hover .skill_item p{
+  color: var(--white);
+}
+
+.skill_item p{
+  font-size: 1.6rem;
+  text-align: left;
+}
+
+/*about*/
+
+.about_content{
+  margin-bottom: 10rem;
+}
+
+.about_content li{
+  width: 50%;
+  float: left;
+}
+
+.about_content li:last-of-type{
+  float: right;
+}
+
+.hexagon {
+  width: 50rem;
+  position: relative;
+  }
+  
+.hexagon::before {
+  content: '';
+  display: block;
+  padding-top: 87%;
+}
+
+.hexagon__inner--1 {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  transform: rotate(60deg);
+}
+
+.hexagon__inner--2 {
+  height: 100%;
+  overflow: hidden;
+  transform: rotate(60deg);
+}
+
+.hexagon__inner--3 {
+  height: 100%;
+  transform: rotate(-120deg);
+  overflow: hidden;
+}
+
+.about_description{
+  text-align: left;
+}
+
+.about_description_title{
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+
+.about_caption span{
+  font-size: 2.2rem;
+  line-height: 2.4;
+  opacity: 0;
+  transition: .6s ease-in-out;
+}
+
+.about_sub_description p{
+  font-size: 2.2rem;
+  line-height: 2.4;
+  text-align: left;
+}
+
+.about_sub_description a,
+.about_sub_description span{  
+  display: inline-block;
+  font-size: 2.2rem;
+  color: var(--orange);
+}
+
+.about_sub_description a:hover{
+  color: var(--black);
+}
+
+
+/*contact,confirm*/
+.contact_content{
+  text-align: left;
+  margin-bottom: 6rem;
+}
+
+.contact_content li{
+  width: calc(50% - 4rem);
+  float: left;
+  position: relative;
+}
+
+.contact_content li:last-of-type{
+  float: right;
+}
+
+.name{
+  margin-bottom: 2rem;
+}
+
+.contact_content label{
+  display: inline-block;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.contact_content label:hover{
+  cursor: pointer;
+  color: var(--orange);
+}
+
+.required{
+  background-color: var(--orange);
+  font-size: 1.8rem;
+  color: var(--white);
+  padding: 5px 1rem;
+  margin-left: 2rem;
+  border-radius: 8px;
+}
+
+.contact_content input,
+.contact_content textarea{
+  display: block;
+  width: 100%;
+  font-size: 1.8rem;
+  border: 1px solid var(--black);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.contact_content input:focus,
+.contact_content textarea:focus{
+  outline: none;
+}
+
+.contact_content textarea{
+  height: 18.2rem;
+}
+
+.error{
+  font-size: 1.8rem;
+  color: var(--orange);
+}
+
+/*confirm*/
+.confirm_caption{
+  font-size: 1.8rem;
+}
+
+.confirm_content{
+  max-width: 80rem;
+  width: 100%;
+  text-align: left;
+  margin: 0 auto;
+}
+
+.confirm_content table{
+  padding: 2rem;
+}
+
+.confirm_box{
+  margin-bottom: 2rem;
+}
+
+.confirm_content th{
+  width: 15rem;
+  font-size: 1.8rem;
+  color: var(--orange);
+  text-align: right;
+}
+
+.confirm_content td{
+  font-size: 1.8rem;
+  vertical-align: middle;
+  padding: 1rem;
+}
+
+/*complete*/
+#complete h3{
+  font-size: 4rem;
+  color: var(--orange);
+  margin-bottom: 4rem;
+}
+
+#complete p{
+  font-size: 2.4rem;
+  margin-bottom: 2rem;
+}
+
+/*  タブレットサイズ*/
+@media screen and (max-width: 1200px){
+  .br_tab{
+    display: block;
+  }
+  
+  a:hover{
+    cursor: auto;
+  }
+  
+  .mask{
+    display: none;
+  }
+  
+  .wrap{
+    padding: 0 2rem;
+  }
+  
+  .title{
+    font-size: 6rem;
+    margin-bottom: 6rem;
+  }
+  
+/*  btn*/
+  .btn_wrap li:hover{
+    background-color: var(--white);
+    border: 1px solid var(--black);
+  }
+  
+  .github:hover a{
+    color: var(--black);
+  }
+
+  .link:hover a{
+    color: var(--orange);
+  }
+
+
+  .github:hover .active,
+  .link:hover .active{
+    opacity: 0;
+  }
+  
+  .btn:hover{
+    background-color: var(--white);
+    color: var(--black);
+    cursor: auto;
+  }
+  
+  #submit:hover{
+    background-color: var(--orange);
+    color: var(--white);
+    border: 1px solid var(--orange);
+  }
+  
+/*  header,footer*/
+  
+  .nav_menu li a:hover{
+    color: var(--black);
+    border-bottom: 1px solid transparent;
+  }
+  
+  .main_logo:hover .active{
+    display: none;
+  }
+  
+  footer .nav_menu li a:hover{
+    color: var(--white);
+  }
+
+/*  index*/
+  
+  .change_text{
+    font-size: 3.6rem;
+  }
+  
+/*  slick*/
+  .slick{
+    padding: 5rem;
+  }
+  
+  .slick-prev, .slick-next{
+    cursor: auto;
+  }
+  
+  .slick-prev{
+    left: 0;
+  }
+  
+  .slick li{
+    margin: 0 1rem;
+  }
+  
+/*  lightbox.css*/
+
+  #lightbox .lb-close{
+    width: 4rem;
+    right: 1rem;
+  }
+  
+  .lb-data .lb-close:hover{
+    opacity: .7;
+    cursor: auto;
+  }
+  
+  .lb-nav a.lb-prev:hover,
+  .lb-nav a.lb-next:hover{
+    opacity: 0;
+  }
+  
+  .lightbox .lb-image{
+    top: 6rem;
+  }
+  
+  .lightbox_caption{
+    top: 3rem;
+  }
+  
+/*  works*/
+
+  .tab_btn:hover{
+    background-color: transparent;
+    color: var(--black);
+    cursor: auto;
+  }
+  
+  .tab_active:hover{
+    background-color: var(--orange);
+    color: var(--white);
+  }
+  
+/*  featherlight*/
+  
+  .featherlight{
+    padding: 2rem;
+    cursor: auto;
+  }
+  
+  .featherlight .featherlight-content{
+    max-width: none;
+    padding: 2rem;
+  }
+  
+  .featherlight .featherlight-close-icon{
+    width: 4rem;
+    cursor: auto;
+    position: absolute;
+  }
+  
+  .featherlight .featherlight-inner{
+    position: relative;
+    top: 5rem;
+  }
+  
+  .feather_link a:hover{
+    color: var(--orange);
+  }
+  
+/*  skill*/ 
+  
+  .skill_type_title{
+    font-size: 4.8rem;
+  }
+  
+  .skill_type_title:before, 
+  .skill_type_title:after {
+    width: 30%;
+    top: 40%;
+  }
+  
+  .skill_contents{
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .skill_contents li{
+    max-width: none;
+    width: calc(50% - 2rem);
+    margin-bottom: 4rem;
+  }
+  
+  .skill_contents li:hover{
+    background-color: var(--white);
+    transform: none;
+    cursor: auto;
+  }
+  
+  .skill_contents li:hover .skill_name,
+  .skill_contents li:hover .skill_item p{
+    color: var(--black);
+  }
+
+  
+/*  about*/
+  
+  .about_content li{
+    width: 100%;
+    margin-bottom: 6rem;
+    float: none;
+  }
+  
+  .about_content li:last-of-type{
+    margin-bottom: 0;
+  }
+  
+  .hexagon {
+    width: 40rem;
+    margin: 0 auto 4rem;
+  }
+  
+  .about_caption span,
+  .about_sub_description p{
+    font-size: 1.8rem;
+  }
+  
+  .about_sub_description a:hover{
+    color: var(--orange);
+  }
+  
+/*  contact*/
+  .contact_content li{
+    width: calc(50% - 2rem);
+  }
+  .contact_content label:hover{
+    color: var(--black);
+    cursor: auto;
+  }
+  
+  /*confirm*/
+
+  .confirm_content{
+    max-width: none;
+  }
+  
+}
+@media screen and (max-width: 660px){
+  
+  .wrap{
+    padding: 0 1rem;
+  }
+  
+  .title{
+    font-size: 5rem;
+    margin-bottom: 4rem;
+  }
+  
+/*  btn*/
+  .btn_wrap{
+    padding-bottom: 0;
+  }
+  
+  .btn_wrap li{
+    width: 100%;
+    margin-bottom: 4rem;
+  }
+  
+  .btn_wrap li:first-of-type{
+    background-color: var(--orange);
+    border: 1px solid var(--orange);
+  }
+  
+  .link a,
+  .link:hover a{
+    color: var(--white);
+  }
+  
+  .link .active,
+  .link:hover .active{
+    opacity: 1;
+  }
+
+  .github:hover .active{
+    opacity: 0;
+  }
+  
+  .btn{
+    width: 100%;
+    font-size: 2.2rem;
+  }
+  
+  #cansel{
+    float: none;
+  }
+
+  #submit{
+    margin-bottom: 4rem;
+    float: none;
+  }
+  
+/*  header,footer*/
+  .main_logo{
+    max-width: 7rem; 
+  }
+  
+  footer .nav_menu{
+    display: none;
+  }
+  
+  #nav_drawer{
+    position: relative;
+  }
+
+  #nav_open,
+  #nav_close{
+    display: block;
+    font-size: 2rem;
+    background-color: var(--white);
+    border: 1px solid #707070;
+    padding: 1rem;
+    border-radius: 8px;
+    position: absolute;
+    right: 0;
+  }
+
+  #nav_close{
+    display: none;
+    z-index: 200;
+  }
+  
+  #nav_content{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    transition: .2s ease;
+    transform: translateY(-105%);
+    background-color: rgba(255,255,255, .9);
+  }
+  
+  #nav_input:checked ~ #nav_open{
+    display: none;
+  }
+  
+  #nav_input:checked ~ #nav_close{
+    display: block;
+    position: fixed;
+    right: 2rem;
+  }
+  
+  #nav_input:checked ~ #nav_content{
+    transform: translateY(0%);
+  }
+  
+  .nav_menu ul{
+    position: relative;
+    top: 12rem;
+  }
+  
+  .nav_menu li{
+    text-align: center;
+    padding: 0;
+    float: none;
+  }
+  
+  .nav_menu li a{
+    width: 15rem;
+    font-size: 4rem;
+    margin: 0 auto;
+  }
+  
+  .nav_menu li a:hover{
+    border-bottom: 1px solid transparent;
+  }
+  
+  footer .main_logo{
+    margin: 0 auto;
+    float: none;
+  }
+  
+/*  index*/
+  .main_title{
+    margin-bottom: 2rem;
+  }
+  
+  .change_text{
+    font-size: 2.4rem;
+  }
+  
+/*  slick*/
+
+  .slick{
+    padding: 4rem;
+  }
+  
+  .slick li{
+    width: 100%;
+    margin: 0 1rem;
+  }
+/*  lightbox*/
+
+  #lightbox .lb-close{
+    width: 2rem;
+    top: 1.6rem;
+    right: 1rem;
+  }
+  
+  .lightbox_caption{
+    font-size: 2rem;
+    top: 2rem;
+  }
+  
+/*  works*/
+  .tab_btn{
+    font-size: 2.4rem;
+  }
+  
+  .show{
+    margin-top: 2rem;
+  }
+  
+  .work_contents li{  
+    width: 100%;
+    margin-bottom: 6rem;
+  }
+  
+  .featherlight{
+    padding: 1rem;
+  }
+  
+  .featherlight .featherlight-content{
+    padding: 1rem;
+  }
+  
+  .featherlight .featherlight-close-icon{
+    margin: 1rem;
+  }
+  
+  .feather_skill p{
+    font-size: 1.8rem;
+  }
+  
+  .feather_caption{
+    font-size: 2.4rem;
+    line-height: 2;
+  }
+  
+/*  skill*/
+
+  .skill_contents{
+    display: none;
+  }
+  
+  .skill_type_title{
+    display: block;
+    font-size: 3rem;
+    background-color: var(--white); 
+    border: 1px solid var(--black);
+    border-radius: 8px;
+    padding: 1.5rem 0;
+    margin-bottom: 2rem;
+    transition: .2s ease;
+    position: relative;
+  }
+  
+  .skill_type_title:before{
+    display: none;
+  } 
+  
+  .skill_type_title::after{
+    content: "";
+    width: auto;
+    height: auto;
+    border: 18px solid transparent;
+    border-top: 21px solid var(--black);
+    border-bottom: none;
+    transition: .2s ease;
+    position: absolute;
+    top: 40%;
+    right: 2rem;
+  }
+  
+  .check:checked + .skill_type_title{
+    background-color: var(--black);
+    color: var(--white);
+  }
+  
+  .check:checked + .skill_type_title::after{
+    transform: rotate(180deg);
+    border-top: 21px solid var(--white);
+  }
+  
+
+  .check:checked + .skill_type_title +.skill_contents{
+    display: block;
+    padding: 0 calc(50vw - 50%);
+  }
+  
+  .skill_contents li{
+    width: 100%;
+    margin-bottom: 6rem;
+    background-color: transparent;
+  }
+  
+  .skill_contents li:hover{
+    background-color: transparent;
+  }
+  
+/*  about*/
+
+  .about_content{
+    margin-bottom: 4rem;
+  }
+  
+  .hexagon {
+    width: 30rem;
+    margin: 0 auto;
+  }
+  
+  .about_description_title{
+    font-size: 2.4rem;
+    margin-bottom: 0;
+  }
+  
+  .about_caption span,
+  .about_sub_description p,
+  .about_sub_description a{
+    font-size: 1.6rem;
+  }
+  
+  .about_sub_description p{
+    line-height: normal;
+  }
+  
+  .about_sub_description span{
+    font-size: 1.8rem;
+  }
+  
+/*  contact*/
+  
+  .contact_content li{
+    width: 100%;
+  }
+  
+  .name{
+    margin-bottom: 0;
+  }
+  
+  .contact_content label{
+    display: inline-block;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .required{
+    font-size: 2rem;
+    margin-left: 2rem;
+  }
+  
+  .contact_content input,
+  .contact_content textarea{
+    width: 100%;
+    font-size: 1.6rem;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .contact_content textarea{
+    margin-bottom: 0;
+  }
+  
+  /*confirm*/
+  
+  #confirm{
+    height: auto;
+  }
+  
+  .confirm_caption{
+    font-size: 1.6rem;
+    text-align: left;
+  }
+
+  .confirm_content table{
+    padding: 2rem 0;
+  }
+
+  .confirm_content th,
+  .confirm_content td{
+    display: block;
+    text-align: left;
+    padding: 0;
+  }
+
+  /*complete*/
+  #complete h3{
+    font-size: 2.8rem;
+    color: var(--orange);
+    margin-bottom: 4rem;
+  }
+
+  #complete p{
+    font-size: 1.4rem;
+  }
+  
+}
